@@ -1,3 +1,5 @@
+# Lines 3 to 157 Credit Code Institute, Boutique Ado
+
 """
 Django settings for wolfhound_design project.
 

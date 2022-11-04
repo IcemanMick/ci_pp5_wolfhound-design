@@ -1,3 +1,5 @@
+# Lines 3 to 11 Credit Code Institute, Boutique Ado
+
 from django.shortcuts import render
 
 # Create your views here.

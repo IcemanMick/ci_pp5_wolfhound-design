@@ -1,3 +1,5 @@
+# Lines 3 to 25 Credit Code Institute, Boutique Ado
+
 """wolfhound_design URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
