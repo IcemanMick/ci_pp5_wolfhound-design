@@ -1,4 +1,4 @@
-# Lines 3 to 157 Credit Code Institute, Boutique Ado
+# Lines 3 to 163 Credit Code Institute, Boutique Ado
 
 """
 Django settings for wolfhound_design project.
@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure--fsh_sj!@t-00_&enn08%qj=_%w@sycfx2%(mzmy8dqs2kj9hp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['wolfhound-design.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -105,12 +105,17 @@ WSGI_APPLICATION = 'wolfhound_design.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation

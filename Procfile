@@ -1,0 +1,1 @@
+web: gunicorn wolfhound_design.wsgi:application
